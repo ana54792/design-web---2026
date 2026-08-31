@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - AULA 1</title>
+
+
+    <script>
+    /*
+        1- para usar javascript há 3 possibilidades: tsg de script incorporado, tag de script externo e a forma dentro da tag (porém não recomendada)
+        2- Javascript é uma linguagem de programação frontend (lado cliente)
+        3- Javascript não é Java
+        4- JS serve para criar comportamento para o desenvolvimento web
+        5- exemplos de uso: galerias de fotos, validação de formulário, modal (janela que abre sobre a página)
+        6- frameworks em javascript são usados para agilizar/facilitar o desenvolvimento - exemplo: bootstrap
+    */
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT</h1>
+    <h2>OBJETO WINDOW</h2>
+
+
+    <script>
+        // window.alert("Olá Mundo!");
+        // // window é o objeto alert é o metodo - que retorna uma janela
+        // let fds = window.confirm("O foi o fim de semana?");
+        // // confirm é um método que mostra 2 opções: confirma e cancelar
+        // // let fds é uma definição de váriavel, que vai receber o resultado do ".confirm"
+        // window.alert(fds);
+        let cor = window.prompt("Qual sua cor favorita?");
+        // window.alert(cor);
+    </script>
+    <h2>OBJETO DOCUMENT</h2>
+    <p id="nome">IFRN CNAT INFOWEB</p>
+    <script>
+        document.getElementById('nome').style.color = cor;
+        // DOM - MODELO DE OBJETO DO DOCUMENTO
+        // por isso o parágrafo com id precisa ficar antes do comando
+        // getElementById é um metodo que paga o elemento que tem
+        // o 'id' igual a 'nome'
+        // 'style' é a propriedade, assim como 'color'
+        // 'green' é o valor relacionado com a propriedade color
+        document.getElementById('nome').innerHTML = 'INFOWEB, HOJE TEM ABERTURA!';
+        // innerhtml - inserir html na marcação que tem o id nos parenteses
+        document.write("<p>MARCAÇÃO INSERIDA PELO JS</p>")
+        // o método write escreve no html
+    </script>
+    <h2>VARIÁVEIS</h2>
+    <script>
+        let curso = 'infoweb'
+        let num = 3;
+        let num2 = 5;
+        let float = 2.4;
+        let boo = true;
+
+
+        // para definir uma variavel é necessario usar 'let' ou cost
+        // 'let' é para variavel que podera mudar o valor depois
+        // 'cost' é uma variavel que não mudara o valor depois (isto é, uma 'costante')
+
+
+        console.log(num+num2)
+        //
+
+
+    </script>
+   
+</body>
+</html>
+

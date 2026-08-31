@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - DIA 2</title>
+</head>
+<body>
+    <h1>JAVASCRIPT</h1>
+    <h2>Operadores aritméticos</h2>
+
+    <script>
+        console.log('OPERADORES ARITMÉTICOS');
+        console.log(54+98);
+        console.log(548-98);
+        console.log(98*65);
+        console.log(65/8);
+        let a = 8;
+        console.log("VALOR DE A++: ");
+        console.log(a++);
+        //Quando o '++' está depois, a variável é impressa e só depois adiciona +1
+        console.log("VALOR DE A: ");
+        console.log(a);
+        console.log("VALOR DE ++A: ");
+        //INCREMENTO: quando o '++' é antes. a variável recebe +1 e depois é impressa
+        console.log(++a);
+        console.log(a--); //DECREMENTO: mesma lógica do incremento, mas para -1
+        console.log(--a);
+    </script>
+    <h2>OPERADORES RELACIONAIS</h2>
+    <script>
+        console.log("4=='4': ");
+        console.log(4 =="4"); //Avaliam se são iguais, porém não no tipo (int, string...), ou seja, '4 == "4"' é true
+        console.log("4 ==='4'");
+        console.log(4 ==="4");
+        // avalia se são iguais no tipo E no valor, ou seja, mais rigoroso
+        console.log(4!=6); //se são diferentes
+        console.log(4>7); //<=, >=...
+        console.log(4==4 && 5==8);
+        // && retorna verdadeiro se ambas forem verdadeiras, equivalente á AND
+        console.log(4==6 || 5==7);
+        // || retorna verdadeiro se uma for verdadeira, equivalente á OR
+    </script>
+    <h2>ESTRUTURA CONDICIONAL</h2>
+    <script>
+        let lanche = "bolo";
+        if(lanche == "bolo"){ // é necessário colocar um operador condicional
+            console.log("OPA!! HOJE É BOLO")
+        }
+        else
+            console.log(":(");
+
+            //IF'S ANINHADOS!
+
+        lanche = "cuscuz";
+        if(lanche == "bolo"){
+            console.log("HOJE É BÓLOS!!!!!!!!!!!!!!!!!!!! ☜(ﾟヮﾟ☜)")
+        }else
+            if(lanche == "cuscuz"){
+                console.log("HOJE É CUSCUZ!!!!!!!")
+            }
+        /*ESTRUTURA CONDICIONAL switch: */
+        let opcao = 2;
+        switch(opcao){
+            case 1: console.log("O VALOR É 1"); break;
+            case 2: console.log ("O VALOR É 2"); break;
+            default: console.log("Nenhuma ds opcões, né bb 💋")
+        }
+
+         opcao = "handebol";
+         switch(opcao){ //é necessário a variável no parenteses
+            case "basquete": console.log("HJ TEM BASQUETE"); break;
+            //O BREAK é necessário para PARAR o switch
+            case "handebol": console.log ("HJ TEM HANDEBOL"); break;
+            default: console.log("N foi dessa vez 💋")
+        }
+    </script>
+    <!--marcação de button é um botão mais usado para interações com javascript, visualmente é igual ao input do tipo submit (só que este é usado em uma marcação de form)-->
+    <button id="incrementar"> INCREMENTAR</button> 
+    <span id="resultado">0</span>
+    <!--span é uma marcação sem valor semântico do tipo inline-->
+
+    <script>
+        const incrementar = document.getElementById('incrementar');
+        //const é a definição de uma variáel que não mudará o valor dps
+        incrementar.addEventListener("click", function(e){
+            document.getElementById("resultado").innerHTML= 
+            parseInt(document.getElementById("resultado").textContent)+1
+        })
+    </script>
+</body>
+</html>
