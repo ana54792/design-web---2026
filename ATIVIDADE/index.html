@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE</title>
+</head>
+<body>
+    <h1>ATIVIDADE</h1>
+    <h2>SEQUÊNCIA NÚMERICA</h2>
+    <p id="resultado"></p>
+
+    <script>
+        for (let i = -10; i <= 10; i++) {
+            document.write(i + ", ");
+        }
+    </script>
+
+    <h2>NOMES DE CORES DIFERENTES</h2>
+    <p id="resultado1"></p>
+    <script>
+        const cores = ["blue", "red", "black", "purple", "pink", "orange", "green"];
+
+        let resultado1 = document.getElementById("resultado1");
+
+        for (let i = 0; i < cores.length; i++) {
+            resultado1.innerHTML += "<span style='color:" + cores[i] + "'>" + "Raquel" + "</span><br>";
+        };
+    </script>
+
+    <h2>NÚMEROS DE TAMANHOS DIFERENTES</h2>
+    <p id="resultado2"></p>
+
+    <script>
+       
+        const resultado2 = document.getElementById("resultado2");
+        for(let i = 0; i<6 ; i++){
+            resultado2.innerHTML+= `<span style='font-size:${i}rem'>${i}</span> `
+        }
+    </script>
+
+    <h2>IMPUT DE NOME</h2>
+    
+
+    <label>
+        Nome: <input type="text" id="nome"> <br>
+        <button id="gerar">GERAR</button>
+        <p id="textoformatado"></p>
+    </label>
+    <p id="resultado3"></p>
+    <script>
+        let gerar = document.querySelector("#gerar");
+    
+        gerar.addEventListener("click", function(e) {
+            let nome = document.querySelector("#nome").value;
+            for(let i = 0; i<6 ; i++){
+                resultado3.innerHTML+= `<span style='font-size:${i}rem'>${nome}</span> <br>`
+            }
+        
+        });
+    </script>
+
+    <h2>AUMENTAR E DIMINUIR FONTE</h2><br>
+    <button id="aumentar">AUMENTAR</button>
+    <button id="voltar">VOLTAR</button>
+    <button id="diminuir">DIMINUIR</button>
+
+    <script>
+        let aumentar = document.getElementById("aumentar");
+        let voltar = document.getElementById("voltar");
+        let diminuir = document.getElementById("diminuir");
+
+        aumentar.addEventListener("click", function(e) {
+            document.body.style.fontSize = "2rem";
+        });
+        voltar.addEventListener("click", function(e) {
+            document.body.style.fontSize = "1rem";
+        });
+        diminuir.addEventListener("click", function(e) {
+            document.body.style.fontSize = "0.5rem";
+        });
+    </script>
+</body>
+</html>
