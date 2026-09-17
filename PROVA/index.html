@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COR RANDÔMICA</title>
+</head>
+<body>
+    <h1>COR RANDÔMICA</h1>
+    <button id="button">MUDAR</button>
+    <!-- <p id="lista"></p> -->
+     <p id="resultado"></p>
+    <script>
+        let gerar = document.getElementById("button");
+        let lista = document.getElementById("lista");
+        let resultado = document.getElementById("resultado");
+        
+
+        gerar.addEventListener("click", function(e){
+            let r = Math.random() * 255
+            r = Math.floor(r)
+            let g = Math.random() * 255
+            g = Math.floor(g)
+            let b = Math.random() * 255
+            b = Math.floor(b)
+            document.body.style.backgroundColor = `rgb(${r},${g},${b})`
+
+            // const cores = `rgb(${r},${g},${b})`
+            
+            // lista.innerHTML(cores)
+            // for (i>= 0, i<= 20, i++){
+            //     resultado.innerHTML(`<span><\span>`)
+            //     document.span.style = `display: inline-block; width: 20px; height: 20px; margin: 2px;`
+            // }
+            
+            
+        });
+    </script>
+</body>
+</html>
