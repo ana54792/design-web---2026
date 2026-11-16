@@ -3,8 +3,9 @@
 
   </HeaderSection>
   <main>
-  
+    <router-view></router-view>
   </main>
+  <FooterSection></FooterSection>
 </template>
 
 <script>

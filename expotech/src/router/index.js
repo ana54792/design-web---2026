@@ -1,8 +1,28 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import { createPinia } from 'pinia'
+import { cretaeRouter, createWebHistory } from 'vue-router'
+import OrganizacaoView from '@/view/OrganizacaoView.vue'
+import ContatoView from '@/view/ContatoView.vue'
 
-const pinia = createPinia()
+const routes = [
+    {
+        path: '/',
+        name 'Home',
+        component: HomeView
+    },
+    {
+        path: '/contato',
+        name 'Contato',
+        component: ContatoView
+    },
+    {
+        path: '/organizacao',
+        name 'Organização',
+        component: OrganizacaoView
+    },
+]
 
-createApp(App).use(router).use(pinia).mount('#app')
+const router = createRouter({
+    history: createWebHistory(),
+    routes
+})
+
+export default router

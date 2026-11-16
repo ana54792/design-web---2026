@@ -5,4 +5,4 @@ export const noticiaLista = [
         autor: "Fernanda Maria"
         descricao: "texto"
     }
-]
+];
