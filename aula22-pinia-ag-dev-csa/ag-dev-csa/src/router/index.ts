@@ -1,4 +1,3 @@
-import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
@@ -13,7 +12,7 @@ const routes = [
     {​
         path: '/projetos',​
         name: 'projetos',​
-        component: () => import('../views/ProjetosView.vue')​
+        component: () => import('../views/ProjetoView.vue')​
     },​
     {
         path: '/contato',
@@ -34,4 +33,4 @@ const routes = [
 
 
 
-export default router
+export default routes
