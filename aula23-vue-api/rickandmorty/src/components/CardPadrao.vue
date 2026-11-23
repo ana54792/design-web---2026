@@ -48,8 +48,9 @@ defineProps({
       <p>{{ subtitulo }}</p>
       <p>{{ subtituloa }}</p>
       <p>{{ subtitulob }}</p>
-      <p>Local: {{ subtitulod }}</p>
-      <p>Episódios: {{ subtituloe }}</p>
+      <p>{{ subtitulod }}</p>
+      <p>{{ subtituloe }}</p> 
+      <!-- episodios que o personagem aparece -->
       <p>{{ subtituloc }}</p>
     </div>
   </div>
